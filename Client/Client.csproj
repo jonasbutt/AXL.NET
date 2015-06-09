@@ -33,9 +33,29 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AxlClient.cs" />
+    <Compile Include="AxlClientFactory.cs" />
+    <Compile Include="AxlClientSettings.cs" />
+    <Compile Include="AxlResult.cs" />
+    <Compile Include="IAxlClient.cs" />
+    <Compile Include="IAxlClientFactory.cs" />
+    <Compile Include="IAxlClientSettings.cs" />
+    <Compile Include="IAxlResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeneratedClient\GeneratedClient.csproj">
+      <Project>{c071cb75-7fbe-4ae7-9ca3-955a563a45dd}</Project>
+      <Name>GeneratedClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
